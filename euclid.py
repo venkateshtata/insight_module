@@ -19,7 +19,7 @@ class euclid_engine(object):
         self.sender = imagezmq.ImageSender(connect_to='tcp://'+ip+':'+str(port))
 
     def init_web(self):
-            self.video_stream = VideoStream().start()
+            self.video_stream = VideoStream(0).start()
 
     def init_rpi(self):
             self.video_stream = VideoStream(usePiCamera=True).start()
